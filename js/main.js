@@ -1,14 +1,4 @@
-const searchEl=document.querySelector('.search');
-const searchInputEl=searchEl.querySelector('input');
-searchEl.addEventListener('click',function(){
-  searchInputEl.focus();
-  searchInputEl.setAttribute("placeholder",'통합검색');
-  searchEl.classList.add("focused");
-});
-searchInputEl.addEventListener('blur',function(){
-  searchInputEl.setAttribute("placeholder",'');
-  searchEl.classList.remove("focused");
-});
+
 
 const badgesEl=document.querySelector('.badges');
 const toTopEl  = document.querySelector('#to-top');
@@ -72,6 +62,7 @@ new Swiper('.promotion .swiper',{
     nextEl:'.promotion .swiper-next'
   }
 });
+
 new Swiper('.awards .swiper',{
   loop:true,
   autoplay:true,
@@ -130,8 +121,4 @@ spyEls.forEach(function(spyEl){
     .setClassToggle(spyEl,'show') //토글할 요소, 적용할 className
     .addTo(new ScrollMagic.Controller());
 });
-
-
-const thisYear =document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
 
